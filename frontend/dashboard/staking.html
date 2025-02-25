@@ -21,52 +21,30 @@
 </div>
     <!-- Sidebar Section -->
     <nav class="sidebar" id="sidebar">
-        <div class="account-switcher">
-            <div class="account-dropdown" onclick="toggleDropdown()">
-                <div class="selected-account">
-                    <img src="Assets/NFT sneak peak...3.jpg" alt="User 1" id="selectedAccountImg">
-                    <span class="dropdown-text" id="selectedAccountName">
-                        <p id="walletAddress" style="display: none; font-weight: bold;"></p>
-                    </span>
-                </div>
-                <span class="arrow">&#x25BC;</span> <!-- Down arrow -->
-            </div>
-            <div class="accounts-container" id="accountsContainer">
-                <!-- Account 1 -->
-                <div class="account active" id="account1"
-                    onclick="switchAccount('account1', 'User 1', 'Assets/NFT sneak peak...3.jpg')">
-                    <img src="Assets/NFT sneak peak...3.jpg" alt="User 1" class="account-img">
-                    <div class="user_contents">
-                        <span class="username">
+            <div class="account-switcher">
+                <div class="account-dropdown" onclick="toggleDropdown()">
+                    <div class="selected-account">
+                        <img src="Assets/NFT sneak peak...3.jpg" alt="User 1" id="selectedAccountImg">
+                        <span class="dropdown-text">
+                            <button id="cryptoConnect" class=" theme-switcher">
+                                <i class="fas fa-wallet me-2"></i> Connect Wallet
+                            </button>
                             <p id="walletAddress" style="display: none; font-weight: bold;"></p>
                         </span>
-                        <span class="active-check" id="check1">&#10003;</span>
                     </div>
                 </div>
-                <!-- Account 2 -->
-                <div class="account" id="account2"
-                    onclick="switchAccount('account2', 'User 2', 'Assets/NFT sneak peak...4.jpg')">
-                    <img src="Assets/NFT sneak peak...4.jpg" alt="User 2" class="account-img">
-                    <div class="user_contents">
-                        <span class="username">User 2</span>
-                        <span class="active-check" id="check2">&#10003;</span>
-                    </div>
-                </div>
-                <!-- Account 3 -->
-                <div class="account" id="account3"
-                    onclick="switchAccount('account3', 'User 3', 'Assets/NFT sneak peak...5.jpg')">
-                    <img src="Assets/NFT sneak peak...5.jpg" alt="User 3" class="account-img">
-                    <div class="user_contents">
-                        <span class="username">User 3</span>
-                        <span class="active-check" id="check3">&#10003;</span>
-                    </div>
+            
+                <!-- Theme Switcher -->
+                <button id="theme-switcher" class="theme-switcher" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i> Dark
+                </button>
+            
+                <!-- Success Popup -->
+                <div id="walletPopup" class="popup" style="display: none;">
+                    <p>✅ Wallet successfully connected!</p>
                 </div>
             </div>
-            <!-- Theme Switcher -->
-            <button id="theme-switcher" class="theme-switcher" aria-label="Toggle Theme">
-                <i class="fas fa-moon"></i> Dark
-            </button>
-        </div>
+
 
         <div class="overlay" id="overlay" onclick="closeDropdown()"></div> <!-- Overlay div -->
         <!-- Navigation Links -->
