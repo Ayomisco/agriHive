@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgricHive - Blockchain Agricultural Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-green: #2d5a27;
+            --secondary-green: #4c8c4a;
+            --accent-gold: #d4af37;
+            --light-beige: #f5f5dc;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-beige);
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(45, 90, 39, 0.9), rgba(45, 90, 39, 0.8)),
+                url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            color: white;
+            padding: 120px 0;
+        }
+
+        .ecosystem-card {
+            transition: transform 0.3s;
+            border: 2px solid var(--primary-green);
+        }
+
+        .ecosystem-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .roadmap-scroll {
+            overflow-x: auto;
+        }
+
+        .theme-dark {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="AgricHive Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="btn btn-success ms-2" href="dashboard/AgriHiveslink.html">Dashboard</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-secondary ms-2" onclick="toggleTheme()">Toggle Theme</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 mb-4">Revolutionizing Agriculture Through Blockchain</h1>
+            <p class="lead mb-4">Empowering farmers and investors with transparent, decentralized agricultural solutions
+            </p>
+            <div class="d-flex gap-3 justify-content-center">
+                <a href="#ecosystem" class="btn btn-warning btn-lg">Explore Features</a>
+                <a href="dashboard/AgriHiveslink.html" class="btn btn-success btn-lg" >Launch
+                    Dashboard</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="farming-innovation.jpg" alt="Agricultural Innovation" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-4">Cultivating the Future of Farming</h2>
+                    <p class="lead">AgricHive combines blockchain technology with agricultural expertise to create a
+                        sustainable ecosystem for farmers, investors, and consumers.</p>
+                    <div class="accordion" id="aboutAccordion"></div>
+                        <!-- Accordion Items Here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosystem Section -->
+    <section id="ecosystem" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">AgriHive Ecosystem</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card ecosystem-card h-100">
+                        <div class="card-body">
+                            <i class="text-success me-3 text-9xl fa-2x">🌱</i>
+                            <h5 class="card-title">CropChain Tracking</h5>
+                            <p class="card-text">Immutable blockchain records for crop lifecycle tracking</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- AgriHivelink -->
+                <div class="col-md-4">
+                    <div class="card ecosystem-card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-users fa-2x text-success me-3"></i>
+                                <h5 class="card-title mb-0">AgriHivelink</h5>
+                            </div>
+                            <p class="card-text">A social network and knowledge hub connecting farmers, agricultural researchers, and experts for knowledge-sharing and
+                            innovation.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- AgriHive Exchange -->
+                <div class="col-md-4">
+                    <div class="card ecosystem-card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-exchange-alt fa-2x text-success me-3"></i>
+                                <h5 class="card-title mb-0">AgriHive Exchange</h5>
+                            </div>
+                            <p class="card-text">A decentralized trading platform that allows farmers and traders to buy, sell, and hedge agricultural commodities using
+                            fiat and crypto.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- AgriHivelabs -->
+                <div class="col-md-4">
+                    <div class="card ecosystem-card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-flask fa-2x text-success me-3"></i>
+                                <h5 class="card-title mb-0">AgriHivelabs</h5>
+                            </div>
+                            <p class="card-text">Innovation hub developing cutting-edge agricultural technologies and
+                                sustainable farming solutions.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- AgriHivetake -->
+                <div class="col-md-4">
+                    <div class="card ecosystem-card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-coins fa-2x text-success me-3"></i>
+                                <h5 class="card-title mb-0">AgriHivetake</h5>
+                            </div>
+                            <p class="card-text">Staking platform offering passive income opportunities while supporting
+                                agricultural growth.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- AgriHive Bank -->
+                <div class="col-md-4">
+                    <div class="card ecosystem-card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-university fa-2x text-success me-3"></i>
+                                <h5 class="card-title mb-0">AgriHive Bank</h5>
+                            </div>
+                            <p class="card-text">Decentralized financial services offering agricultural loans and investment
+                                opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- AgriHive Wallet -->
+                <div class="col-md-4">
+                    <div class="card ecosystem-card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-wallet fa-2x text-success me-3"></i>
+                                <h5 class="card-title mb-0">AgriHive Wallet</h5>
+                            </div>
+                            <p class="card-text">Secure digital wallet for managing agricultural assets and cryptocurrency
+                                transactions.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- AgriHive Farm -->
+                <div class="col-md-4">
+                    <div class="card ecosystem-card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-tractor fa-2x text-success me-3"></i>
+                                <h5 class="card-title mb-0">AgriHive Farm</h5>
+                            </div>
+                            <p class="card-text">Real-world agricultural ventures enabling investment and participation in
+                                sustainable farming projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <!-- <section id="roadmap" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Development Roadmap</h2>
+            <div class="roadmap-scroll">
+                <div class="d-flex gap-3">
+                    <!-- Roadmap Cards 
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Dashboard Modal -->
+    <div class="modal fade" id="dashboardModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Coming Soon!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Our dashboard is currently under development. Stay tuned for updates!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <section id="roadmap" class="py-5 ">
+        <div class="container">
+            <footer class="text-center py-4">
+                <p>&copy; 2023 AgricHive. All rights reserved.</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#hero" class="text-decoration-none">Home</a></li>
+                    <li class="list-inline-item"><a href="#about" class="text-decoration-none">About</a></li>
+                    <li class="list-inline-item"><a href="#ecosystem" class="text-decoration-none">Ecosystem</a></li>
+                    <li class="list-inline-item"><a href="#roadmap" class="text-decoration-none">Roadmap</a></li>
+                </ul>
+                <div class="mt-3">
+                    <a href="#" class="text-success me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-success me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-success me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-success"><i class="fab fa-instagram"></i></a>
+                </div>
+            </footer>
+        </div>
+    </section>
+            
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            document.body.classList.toggle('theme-dark');
+        }
+    </script>
+</body>
+
+</html>
